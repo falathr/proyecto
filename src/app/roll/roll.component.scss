@@ -1,0 +1,33 @@
+/* my-component.component.css */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Esto centra verticalmente en la ventana */
+}
+
+.main {
+  text-align: center;
+}
+
+.form-group {
+  margin-top: 20px;
+}
+
+.form-group h2 {
+  margin-bottom: 20px; /* Espacio inferior para separar el título de los botones */
+}
+
+.button-container {
+  margin: 10px 0;
+}
+
+/* my-component.component.css */
+
+#boton {
+  margin-bottom: 10px; /* Espacio inferior entre los botones */
+
+  border: 1px solid black; /* Grosor del borde y color */
+}
+
