@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject} from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { BodysPersona } from '../models/PutPersonaRequest';
@@ -12,7 +12,7 @@ import { FrontGetComponent } from '../front-get/front-get.component';
   templateUrl: './frot-put.component.html',
   styleUrls: ['./frot-put.component.scss']
 })
-export class FrotPutComponent implements OnInit{
+export class FrotPutComponent implements OnInit {
 
   public regex = regex;
   public capturarRol: any = '';
@@ -27,32 +27,33 @@ export class FrotPutComponent implements OnInit{
     private _agregarPersona: AgregarPersonaService,
     private _dialogRef: MatDialogRef<FrotPutComponent>,
     private dialog: MatDialog,
-  ){
+  ) {
     this.capturarRol = data;
-    this.modificarPersona.patchValue({nombre: this.capturarRol.nombre});
-    this.modificarPersona.patchValue({telefono: this.capturarRol.tel});
-    this.modificarPersona.patchValue({email: this.capturarRol.email});
+    this.modificarPersona.patchValue({ nombre: this.capturarRol.nombre });
+    this.modificarPersona.patchValue({ telefono: this.capturarRol.tel });
+    this.modificarPersona.patchValue({ email: this.capturarRol.email });
   }
 
   ngOnInit(): void {
 
   }
 
-  modificarPersonona(){
+  //Modifica los campos de la entidad persona
+  modificarPersonona() {
     let persona: BodysPersona = {
       name: this.modificarPersona.get('nombre')?.value != null ? this.modificarPersona.get('nombre')?.value : this.capturarRol.nombre,
       phoneNumber: this.modificarPersona.get('telefono')?.value != null ? this.modificarPersona.get('telefono')?.value : this.capturarRol.tel,
       email: this.modificarPersona.get('email')?.value != null ? this.modificarPersona.get('email')?.value : this.capturarRol.email
     }
     this._agregarPersona.ActualizarPersona(this.capturarRol.id, persona).subscribe({
-      next:(response)=>{
-        if(response){
+      next: (response) => {
+        if (response) {
 
-              Swal.fire('Guardado!', '', 'success');
-              this.dialog.closeAll();
+          Swal.fire('Guardado!', '', 'success');
+          this.dialog.closeAll();
         }
       },
-      error:(error)=>{
+      error: (error) => {
         console.log(error);
       }
 
@@ -60,10 +61,12 @@ export class FrotPutComponent implements OnInit{
 
   }
 
+  //Valida campos
   get pNombre() { return this.modificarPersona.get('nombre'); }
   get telefono() { return this.modificarPersona.get('telefono'); }
   get email() { return this.modificarPersona.get('email'); }
 
+  //Mensajes de alertas
   alert() {
     const alerts = {
       required: {

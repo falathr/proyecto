@@ -41,6 +41,8 @@ export class FrontPostComponent implements OnInit {
   ngOnInit(): void {
 
   }
+
+  //Agrega la nueva persona
   agregarPersonaPost(){
     let addres: BodyAddress={
       street: this.agregarPersona.get('street')?.value,
@@ -72,7 +74,6 @@ export class FrontPostComponent implements OnInit {
     this._agregarPersona.adicionarPersona(bodyAgregar).subscribe({
       next:(response)=>{
         if(response){
-
               Swal.fire('Guardado!', '', 'success');
               this._dialogRef.close();
         }
@@ -84,10 +85,12 @@ export class FrontPostComponent implements OnInit {
 
   }
 
+  //Valida los campos
   get pNombre() { return this.agregarPersona.get('nombre'); }
   get telefono() { return this.agregarPersona.get('telefono'); }
   get email() { return this.agregarPersona.get('email'); }
 
+  //Los mensajes de alerta
   alert() {
     const alerts = {
       required: {

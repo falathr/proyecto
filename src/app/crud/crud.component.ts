@@ -21,6 +21,7 @@ export class CrudComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //llama ventana agregar Persona
   agregarPersona() {
     this.roll = this.capturarRol.roll;
     this.dialog.open(FrontPostComponent, {
@@ -31,7 +32,7 @@ export class CrudComponent implements OnInit {
       disableClose: true
     });
   }
-
+  //llama ventana obtener persona
   obtenerPersona() {
     this.roll = this.capturarRol.roll;
     this.dialog.open(FrontGetComponent, {

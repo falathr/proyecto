@@ -55,6 +55,7 @@ export class FrontGetComponent implements OnInit {
     });
   }
 
+  //Metodo borrar persona
   borrarPersona(id: number){
     this._getPersona.borrarPersona(id).subscribe({
       next: (response)=>{Swal.fire({
@@ -69,6 +70,7 @@ export class FrontGetComponent implements OnInit {
     })
   }
 
+  //llama ventana mmodificar persona y le pasa los datos
   modificarPersona(id: number, nombre: String, tel: number, email: String){
     this.dialog.open(FrotPutComponent, {
       minWidth: '400px',

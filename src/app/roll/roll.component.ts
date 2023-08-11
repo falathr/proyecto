@@ -17,7 +17,7 @@ export class RollComponent implements OnInit{
   ngOnInit(): void {
   }
 
-
+  //pagina inicial
   seleccionarRol(rol: Number) {
     this.roll = rol;
     this.dialog.open(CrudComponent, {
