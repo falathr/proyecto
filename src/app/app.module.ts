@@ -18,6 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { IonicModule } from '@ionic/angular';
 import { MatButtonModule } from '@angular/material/button';
 import { FrotPutComponent } from './frot-put/frot-put.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { FrotPutComponent } from './frot-put/frot-put.component';
     HttpClientModule,
     MatIconModule,
     IonicModule.forRoot(),
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
 
   ],
   providers: [],

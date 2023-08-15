@@ -29,7 +29,8 @@ export class CrudComponent implements OnInit {
       data: {
         roll: this.roll
       },
-      disableClose: true
+      disableClose: true,
+      enterAnimationDuration: 500
     });
   }
   //llama ventana obtener persona
@@ -37,7 +38,8 @@ export class CrudComponent implements OnInit {
     this.roll = this.capturarRol.roll;
     this.dialog.open(FrontGetComponent, {
       minWidth: '500px',
-      disableClose: true
+      disableClose: true,
+      enterAnimationDuration: 500
     });
   }
 }

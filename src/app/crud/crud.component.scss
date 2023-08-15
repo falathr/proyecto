@@ -1,10 +1,8 @@
-body{background: white;}
-
-.container{
+.container {
   width: 25vw;
 }
 
-.main{
+.main {
   display: grid;
   grid-template-rows: 1fr 2fr;
   grid-template-columns: 1fr 1fr;
@@ -12,30 +10,34 @@ body{background: white;}
   align-items: center;
 }
 
-.center{
+.center {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
   align-content: center;
 }
 
-.subtitle{
+.subtitle {
   grid-row: 1/span 2;
   grid-column: 1/span 2;
   justify-self: center;
   align-self: center;
 }
 
-.botones{
+.botones {
   grid-column: 1/span 2;
   justify-self: center;
   align-self: center;
 }
 
 #boton {
-  margin-bottom: 10px; /* Espacio inferior entre los botones */
+  margin-bottom: 10px;
+  /* Espacio inferior entre los botones */
   /* Agrega un borde negro a los botones */
-  border: 1px solid black; /* Grosor del borde y color */
-
-
+  border: 1px solid black;
+  /* Grosor del borde y color */
+}
+.custom:hover {
+  background-color: #DEBACE;
+  transition: all 0.8s;
 }

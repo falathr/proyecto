@@ -1,10 +1,47 @@
 /* my-component.component.css */
 
+@keyframes animacion {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.2;
+  }
+
+  40% {
+    opacity: 0.4;
+  }
+
+  60% {
+    opacity: 0.6;
+  }
+
+  80% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .container {
+
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Esto centra verticalmente en la ventana */
+  height: 100vh;
+  animation: animacion 1s ease normal ;
+
+}
+
+.card {
+  max-width: 500px;
+  max-height: 700px;
+  padding: 20px;
+  box-shadow: 10px 10px 20px rgba($color: #000000, $alpha: 0.3)
 }
 
 .main {
@@ -16,7 +53,8 @@
 }
 
 .form-group h2 {
-  margin-bottom: 20px; /* Espacio inferior para separar el título de los botones */
+  margin-bottom: 20px;
+  /* Espacio inferior para separar el título de los botones */
 }
 
 .button-container {
@@ -26,8 +64,19 @@
 /* my-component.component.css */
 
 #boton {
-  margin-bottom: 10px; /* Espacio inferior entre los botones */
+  margin-bottom: 10px;
+  /* Espacio inferior entre los botones */
 
-  border: 1px solid black; /* Grosor del borde y color */
+  border: 1px solid black;
+  /* Grosor del borde y color */
 }
 
+.custom:hover {
+  background-color: #DEBACE;
+  transition: background-color 0.8s ease;
+}
+
+.card-title {
+  text-align: center;
+  padding-top: 10px;
+}

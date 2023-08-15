@@ -25,7 +25,8 @@ export class RollComponent implements OnInit{
       data: {
         roll: this.roll
       },
-      disableClose: true
+      disableClose: true,
+      enterAnimationDuration: 500
     });
   }
 }

@@ -1,13 +1,19 @@
 <mat-dialog-content class="mat-typography">
   <section class="container">
-    <div class="main">
-      <h2>Por favor elija su rol</h2>
-      <div>
-        <button mat-button class="btn btn-success" id="boton" (click)="seleccionarRol(1)">ESTUDIANTE</button>
-      </div>
-      <div>
-        <button mat-button class="btn btn-success" id="boton" (click)="seleccionarRol(2)">PROFESOR</button>
-      </div>
-    </div>
+    <mat-card class="card">
+      <mat-card-header>
+        <h2 class="card-title">Por favor elija su rol</h2>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="main">
+          <div>
+            <button mat-button class="btn custom " id="boton" (click)="seleccionarRol(1)">ESTUDIANTE</button>
+          </div>
+          <div>
+            <button mat-button class="btn custom" id="boton" (click)="seleccionarRol(2)">PROFESOR</button>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
   </section>
 </mat-dialog-content>

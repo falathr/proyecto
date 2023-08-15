@@ -80,7 +80,8 @@ export class FrontGetComponent implements OnInit {
         tel: tel,
         email: email
       },
-      disableClose: true
+      disableClose: true,
+      enterAnimationDuration: 500
     });
   }
 }
